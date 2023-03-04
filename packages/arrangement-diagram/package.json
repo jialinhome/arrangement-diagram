@@ -1,0 +1,40 @@
+{
+    "name": "arrangement-diagram",
+    "version": "0.0.1",
+    "description": "基于G6的框架无关的编排可视化解决方案",
+    "main": "dist/index.umd.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.umd.js"
+    },
+    "author": "jiangjialin",
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup -c",
+        "build:watch": "rollup -c -w",
+        "lint": "eslint -f unix \"src/**/*.{ts,tsx}\""
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.0",
+        "@babel/preset-env": "^7.14.1",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-commonjs": "^19.0.0",
+        "@rollup/plugin-image": "^2.0.6",
+        "@rollup/plugin-node-resolve": "^13.0.0",
+        "@rollup/plugin-typescript": "^8.2.1",
+        "@types/webpack-env": "^1.16.0",
+        "rollup": "^2.47.0",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-dts": "^4.0.0",
+        "tslib": "^2.2.0",
+        "typescript": "^4.2.4",
+        "webpack-env": "^0.8.0"
+    },
+    "dependencies": {
+        "@antv/g6": "^4.3.11",
+        "eventemitter3": "^5.0.0",
+        "lodash": "^4.17.21",
+        "reflect-metadata": "^0.1.13"
+    }
+}
