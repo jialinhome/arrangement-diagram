@@ -10,16 +10,21 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "docs:dev": "turbo run docs:dev",
+    "docs:build": "turbo run docs:build"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "vitepress": "1.0.0-alpha.51"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
   "packageManager": "pnpm@7.28.0"
 }
