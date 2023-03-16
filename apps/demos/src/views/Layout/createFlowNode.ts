@@ -1,8 +1,7 @@
-
-import type { DrawNodeShapeConfig } from 'arrangement-diagram';
+import type { DrawNodeShapeConfig } from "arrangement-diagram";
 import type { IShape } from "@antv/g6";
 
-export default function createFlowNode(cfg: DrawNodeShapeConfig):IShape {
+export default function createFlowNode(cfg: DrawNodeShapeConfig): IShape {
   const { cfg: config, group, keyShapeWidth, keyShapeHeight, flow } = cfg;
   const {
     name = "",
@@ -19,11 +18,11 @@ export default function createFlowNode(cfg: DrawNodeShapeConfig):IShape {
 
   const grey = "#CED4D9";
   const colors = {
-    B: '#5B8FF9',
-    R: '#F46649',
-    Y: '#EEBC20',
-    G: '#5BD8A6',
-    DI: '#A7A7A7',
+    B: "#5B8FF9",
+    R: "#F46649",
+    Y: "#EEBC20",
+    G: "#5BD8A6",
+    DI: "#A7A7A7",
   };
   const rectConfig = {
     width: keyShapeWidth,
@@ -65,7 +64,7 @@ export default function createFlowNode(cfg: DrawNodeShapeConfig):IShape {
       text: name.length > 28 ? name.substr(0, 28) + "..." : name,
       fontSize: 12,
       opacity: 0.85,
-      fill:  "#000",
+      fill: "#000",
       cursor: "pointer",
     },
     name: "name-shape",
