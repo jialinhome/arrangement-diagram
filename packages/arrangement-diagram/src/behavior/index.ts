@@ -11,19 +11,18 @@ import type EventEmitter from 'eventemitter3';
 import type ArrangementDiagram from '../index';
 import type { Bus } from '../types';
 
-
 const behaviors = {
-    'hover-node': hoverNode,
-    'select-node-visit': selectNodeVisit,
-    'emit-drag-node': emitDragNode,
-    'add-edge': addEdge,
-    'click-canvas': clickCanvas,
-    'hover-edge': hoverEdge,
-    'click-edge': clickEdge,
+  'hover-node': hoverNode,
+  'select-node-visit': selectNodeVisit,
+  'emit-drag-node': emitDragNode,
+  'add-edge': addEdge,
+  'click-canvas': clickCanvas,
+  'hover-edge': hoverEdge,
+  'click-edge': clickEdge,
 };
 
 export function registerBehaviors(bus: Bus, flow: ArrangementDiagram) {
-    for (const key in behaviors) {
-        G6.registerBehavior(key, behaviors[key](bus, flow));
-    }
+  for (const key in behaviors) {
+    G6.registerBehavior(key, behaviors[key](bus, flow));
+  }
 }
